@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#5A8460"
+
+
+    tools:context=".RegisterUser">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/tlomenu1" />
+
+    <EditText
+        android:id="@+id/registerName"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Imie"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/registerSurname"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:hint="Nazwisko"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/registerPassword"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Hasło"
+        />
+    <EditText
+        android:id="@+id/registerEmail"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Email"  />
+
+
+    <TextView
+        android:id="@+id/registerMap"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:ems="10"
+        android:hint="Wprowadź lokalizację"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/registerIsDriver"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:text="Prowadzisz?" />
+
+    <EditText
+        android:id="@+id/registerSeats"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:ems="10"
+        android:visibility="invisible"
+        android:inputType="number"
+        android:hint="Ilość miejsc" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:background="@android:color/transparent"
+        android:ems="20"
+        android:text="Zarejestruj"
+        android:textColor="#243827"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

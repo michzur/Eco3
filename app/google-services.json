@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "548199292156",
+    "project_id": "sound-groove-338620",
+    "storage_bucket": "sound-groove-338620.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548199292156:android:88526fc612d84f9be88b79",
+        "android_client_info": {
+          "package_name": "com.example.ecotrip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548199292156-s61hv1mftkh43clphka949kc2jvimsh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbPwKyGAXxitjcFo3PPMbtYRUzah2MlZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548199292156-s61hv1mftkh43clphka949kc2jvimsh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
