@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 
-import java.util.Locale;
 
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
     String TAG=this.getClass().getSimpleName();

@@ -1,7 +1,6 @@
 package com.example.ecotrip;
 
 import android.util.Log;
-
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -12,15 +11,10 @@ public class DataBase {
     private static final String TAG = DataBase.class.getName();
     private final FirebaseFirestore db;
     public ArrayList<User> users=new ArrayList<>();
-    public HashMap<String,Group>groups=new HashMap<>();
     public DataBase() {
         db = FirebaseFirestore.getInstance();
     }
 
-
-    public void getUsers(FirestoreCallbackUser callback){
-        readUsers(callback);
-    }
 
     public void sendToDB(User user){
         db.collection("users")
@@ -37,9 +31,10 @@ public class DataBase {
         db.collection("groups")
                 .get()
                 .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        for (QueryDocumentSnapshot document : task.getResult()) {
-
+                    if (task.isSuccessful())
+                    {
+                        for (QueryDocumentSnapshot document : task.getResult())
+                        {
                             Group group=document.toObject(Group.class);
                             groupHashMap.put(group.getDriver().getEmail(),group);
                         }
@@ -117,9 +112,8 @@ public class DataBase {
             {
                 if (task.isSuccessful())
                 {
-                    Log.d(TAG, "Successfully received documents.");
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-
+                    for (QueryDocumentSnapshot document : task.getResult())
+                    {
                         User user=document.toObject(User.class);
                         users.add(user);
                     }

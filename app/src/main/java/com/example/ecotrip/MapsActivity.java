@@ -71,14 +71,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
         BitmapDescriptor iconRose=BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE);
 
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         mMap.setOnMapClickListener(this);
 
-        if(!isRegistering()) {
+        if(!isRegistering())
+        {
             catchUsers();
             putMarkersFromIntent();
         }
@@ -140,14 +141,15 @@ private void showGroup(HashMap<String,Group> groupHashMap){
         User driver=group.getDriver();
     StringBuilder text= new StringBuilder();
     text.append("   Kierowca:");
-    text.append("   "+driver.getName()+"   "+driver.getSurname()+"   "+driver.getEmail()+"\n");
+    text.append("   ").append(driver.getName()).append("   ").append(driver.getSurname()).append("   ").append(driver.getEmail()).append("\n");
 
     text.append("\n   Pasażerowie\n ");
-    for(User passenger:group.getPassengers()) {
+    for(User passenger:group.getPassengers())
         text.append("   ").append(passenger.getName()).append("   ").append(passenger.getSurname()).append("  ").append(passenger.getEmail()).append("\n");
-    }
+
             TextView groupTextView=findViewById(R.id.groupTextview);
             groupTextView.setText(text);
+
             groupLayout.setVisibility(View.VISIBLE);
 }
 
@@ -203,7 +205,8 @@ private void showGroup(HashMap<String,Group> groupHashMap){
 
                 case R.id.userMapInput:
                 {   // When pressed,pass latLng as double[] to Menu and close the window
-                    if(!isRegistering() || dynamic==null) {
+                    if(!isRegistering() || dynamic==null)
+                    {
                         finish();
                         return;
                     }
@@ -211,16 +214,16 @@ private void showGroup(HashMap<String,Group> groupHashMap){
                     double lat = dynamic.getPosition().latitude;
                     double lng = dynamic.getPosition().longitude;
 
-
                     intent.putExtra("latitude", lat); // passing Data back to Menu
                     intent.putExtra("longitude", lng); // passing Data back to Menu
                     setResult(RESULT_OK, intent);
-                    //        getIntent().getExtras().remove("Registration");
+
                     finish();
                 }
                     break;
             }
         }
+
         private void changeVisibility(View view){
             int visibility=view.getVisibility()
                     ==View.VISIBLE ? View.INVISIBLE : View.VISIBLE;

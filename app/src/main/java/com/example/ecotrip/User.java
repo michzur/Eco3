@@ -1,9 +1,7 @@
 package com.example.ecotrip;
 
 import com.google.android.gms.maps.model.LatLng;
-
 import java.io.Serializable;
-import java.util.HashMap;
 
 public class User implements Serializable {
 
@@ -24,11 +22,9 @@ public class User implements Serializable {
         this.distance = distance;
     }
 
-
     public double getLatitude() {
         return latitude;
     }
-
     public double getLongitude() {
         return longitude;
     }
@@ -65,7 +61,6 @@ public class User implements Serializable {
     public String getName() {
         return name;
     }
-
     public boolean getIsDriver() {
         return isDriver;
     }
