@@ -5,7 +5,7 @@
 * [Instructions](#Instructions)
 
 ## General info
-This project was made in Android Studio
+This project was made in Android Studio for SDK 32, with Java 1.8, Firebase, and Google Map API.
 
 ## Technologies
 Project is created with:
