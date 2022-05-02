@@ -20,9 +20,8 @@ Project is created with:
 This project was made in a group of 3, my responsibility was to provide main functionality of an app – a user’s database, login/register, aswell as connecting front and backend.
 ECo3 is an application that makes it easier for employees of one company to travel together with one car to reduce travel costs and exhaust emissions. The application uses the Google API for map management and  Firebase No-SQL database for user data management.
 
-The most difficult part in this project was to manage work for another people - and as it was my first such task i’ve learned alot about working in a group. The biggest task was to implement „Podstawieniowy” cipher -as we wanted to give the user free choice of own symbols/length, after alot of tweaks we’ve created separate table for that, to allow custom ciphering and not making that task too tidious for the user.
+The most difficult part in this project was creating database for login/registering aswell as managing users and groups. I've decided to use No-SQL Firebase as it was free to use and provide every functionality i wanted, still i had to learn a lot about asynchronous calls to make proper communication between users, groups and routes.
 
-Future updates will protect user from in-room peepers with real-time ciphering, aswell as making mode for diary 
 
 ## Instructions
 1. Register yourself using your name,surname, password, email, and provide your location, also if you’re driver click the checkbox and input how many passengers you want to take
